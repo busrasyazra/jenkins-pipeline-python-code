@@ -10,7 +10,7 @@ pipeline {
         }
         stage("Test changeset"){
             when { 
-                changeset "UPDATED_PATH"
+                changeset "**/Jenkinsfile"
             }
             steps {
                 echo "The changeset test worked!!"
