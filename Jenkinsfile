@@ -8,5 +8,13 @@ pipeline {
                 sh 'python pipeline.py'
             }
         }
+        stage("Test changeset"){
+            when { 
+                changeset "UPDATED_PATH"
+            }
+            steps {
+                echo "The changeset test worked!!"
+            }
+        }
     }
 }
