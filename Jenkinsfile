@@ -22,8 +22,9 @@ pipeline {
                         def file = files[k]
                         print file.path 
                     String filePath = file.path    
-                    if (filePath.contains("current/common")) {
+                    if (filePath.contains("vars/*")) {
                                                 // Set UPDATE_PATH to empty to build all jobs
+                        echo busra
                         updatePath = ""
                         break;
                     }
