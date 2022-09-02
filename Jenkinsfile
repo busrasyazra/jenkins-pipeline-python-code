@@ -3,7 +3,6 @@ pipeline {
     stages {
         stage('run') {
             steps {
-                pwd
                 echo 'Clarusway_Way to Reinvent Yourself....'
                 sh 'python --version'
                 sh 'python pipeline.py'
