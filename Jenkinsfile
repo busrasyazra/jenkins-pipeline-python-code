@@ -27,10 +27,10 @@ pipeline {
                         updatePath = ""
                         break;
                     }
-                    elif (filePath.contains("current/projects")) {
+                    else if (filePath.contains("current/projects")) {
                         updatePath = updatePath + ":jjb/jobs/${filePath}"
                     }
-                    elif (filePath.contains("current/auth")) {
+                    else if (filePath.contains("current/auth")) {
                          def splitPath = filePath.split("auth")
                          updatePath = updatePath + ":jjb/jobs/current/projects${splitPath[1]}"
                     }
