@@ -10,7 +10,7 @@ pipeline {
         }
         stage("Test changeset"){
             when { 
-                changeset "**/arcgis-online-devops-jenkins-jobs"
+                changeset "**/jenkins-pipeline-python-code"
             }
             steps {
                 echo "The changeset test worked!!"
