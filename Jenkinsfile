@@ -21,6 +21,7 @@ pipeline {
                     for (int k = 0; k < files.size(); k++) {
                         def file = files[k]
                         print file.path 
+                    String filePath = file.path    
                     if (filePath.contains("current/common")) {
                                                 // Set UPDATE_PATH to empty to build all jobs
                         updatePath = ""
