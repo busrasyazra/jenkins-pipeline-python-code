@@ -21,7 +21,19 @@ pipeline {
                     for (int k = 0; k < files.size(); k++) {
                         def file = files[k]
                         print file.path 
+                    if (filePath.contains("current/common")) {
+                                                // Set UPDATE_PATH to empty to build all jobs
+                        updatePath = ""
+                        break;
                     }
+                    elif (filePath.contains("current/projects")) {
+                        updatePath = updatePath + ":jjb/jobs/${filePath}"
+                    }
+                    elif (filePath.contains("current/auth")) {
+                         def splitPath = filePath.split("auth")
+                         updatePath = updatePath + ":jjb/jobs/current/projects${splitPath[1]}"
+                    }
+                   }
                  }
                }
              }
