@@ -24,7 +24,7 @@ pipeline {
                     String filePath = file.path    
                     if (filePath.contains("vars/*")) {
                                                 // Set UPDATE_PATH to empty to build all jobs
-                        echo busra
+                        echo 'busra'
                         updatePath = ""
                         break;
                     }
