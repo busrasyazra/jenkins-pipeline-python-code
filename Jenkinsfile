@@ -8,14 +8,7 @@ pipeline {
                 sh 'python pipeline.py'
             }
         }
-        /* stage("Test changeset"){
-            when { 
-                changeset "**/jenkins-pipeline-python-code"
-            }
-            steps {
-                echo "The changeset test worked!!"
-            }
-        } */
+       
         stage("Display changeset?") {
             steps {
                 script {
