@@ -22,7 +22,7 @@ pipeline {
                         def file = files[k]
                         print file.path 
                         filePath = file.path
-                        if filePath == "vars/*" {
+                        if (filePath == "vars/*") {
                             print ("Busra")
                         }
                         else {
