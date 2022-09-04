@@ -21,20 +21,12 @@ pipeline {
                     for (int k = 0; k < files.size(); k++) {
                         def file = files[k]
                         print file.path 
-                    String filePath = file.path    
-                    if (filePath.contains("vars/*")) {
-                                                // Set UPDATE_PATH to empty to build all jobs
-                        echo 'busra'
-                        updatePath = ""
-                        break;
-                    }
-                    else if (filePath.contains("current/projects")) {
-                        updatePath = updatePath + ":jjb/jobs/${filePath}"
-                    }
-                    else if (filePath.contains("current/auth")) {
-                         def splitPath = filePath.split("auth")
-                         updatePath = updatePath + ":jjb/jobs/current/projects${splitPath[1]}"
-                    }
+               
+                    if file.path == "vars/*" 
+                        print ('Busra')
+                       
+                    else
+                        print ('Celenay')
                    }
                  }
                }
