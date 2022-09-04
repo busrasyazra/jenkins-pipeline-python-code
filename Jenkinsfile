@@ -21,7 +21,7 @@ pipeline {
                     for (int k = 0; k < files.size(); k++) {
                         def file = files[k]
                         print file.path 
-                        if (file.path == "vars/*") {
+                        if (file.path == "Jenkinsfile") {
                             print ("Busra")
                         }
                         else {
