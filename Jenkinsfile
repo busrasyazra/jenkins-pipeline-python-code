@@ -26,7 +26,7 @@ pipeline {
                             echo ${updatePath}
                         }
                         else if (file.path.contains("vars/")) {
-                            updatePath = updatePath + ":jjb/jobs/${file.path}
+                            updatePath = updatePath + ":jjb/jobs/${file.path}"
                             echo ${updatePath}
                         }    
                         else {
