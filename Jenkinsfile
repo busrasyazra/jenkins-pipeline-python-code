@@ -29,8 +29,9 @@ pipeline {
                             updatePath = updatePath + ":jjb/jobs/${file.path}"
                             print updatePath
                         }    
-                        else {
-                        print ("Celenay")
+                        else if (file.path.contains("pipeline.py")) {
+                            updatePath = updatePath + ":jjb/jobs/${file.path}"
+                            print updatePath
                         }
                    }
                  }
