@@ -22,10 +22,12 @@ pipeline {
                         def file = files[k]
                         print file.path 
                         if (file.path.contains("Jenkinsfile")) {
-                            print ("Busra")
+                            updatePath = ""
+                            echo ${updatePath}
                         }
                         else if (file.path.contains("vars/")) {
-                            print ("BusraCelenay")
+                            updatePath = updatePath + ":jjb/jobs/${file.path}
+                            echo ${updatePath}
                         }    
                         else {
                         print ("Celenay")
