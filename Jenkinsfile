@@ -22,14 +22,18 @@ pipeline {
                         def file = files[k]
                         print file.path 
                         updatePath = "jjb/jobs/current/common"
-                        if (file.path.contains("Jenkinsfile")) {
+                        if (file.path.contains("current/common")) {
                             print updatePath
                         }
-                        else if (file.path.contains("vars/")) {
+                        else if (file.path.contains("current/projects")) {
                             updatePath = updatePath + ":jjb/jobs/${file.path}"
                             print updatePath
                         }    
-                        else if (file.path.contains("pipeline.py")) {
+                        else if (file.path.contains("current/auth")) {
+                            updatePath = updatePath + ":jjb/jobs/${file.path}"
+                            print updatePath
+                        }
+                        else if (file.path.contains("current/roles")) {
                             updatePath = updatePath + ":jjb/jobs/${file.path}"
                             print updatePath
                         }
