@@ -24,7 +24,7 @@ pipeline {
                         if (file.path.contains("Jenkinsfile")) {
                             print ("Busra")
                         }
-                        else if (file.path.contains("vars/") {
+                        else if (file.path.contains("vars/")) {
                             print ("BusraCelenay")
                         }    
                         else {
