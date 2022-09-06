@@ -21,7 +21,7 @@ pipeline {
                     for (int k = 0; k < files.size(); k++) {
                         def file = files[k]
                         print file.path 
-                        String updatePath = "UPDATE_PATH:-/jjb/jobs/current"
+                        String updatePath = "jjb/jobs/current/common"
                         if (file.path.contains("Jenkinsfile")) {
                             echo $updatePath
                         }
