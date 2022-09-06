@@ -27,7 +27,7 @@ pipeline {
                         }
                         else if (file.path.contains("vars/")) {
                             updatePath = updatePath + ":jjb/jobs/${file.path}"
-                            echo ${updatePath}
+                            print updatePath
                         }    
                         else {
                         print ("Celenay")
