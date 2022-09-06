@@ -23,11 +23,11 @@ pipeline {
                         print file.path 
                         String updatePath = "UPDATE_PATH:-/jjb/jobs/current"
                         if (file.path.contains("Jenkinsfile")) {
-                            echo ${updatePath}
+                            echo $updatePath
                         }
                         else if (file.path.contains("vars/")) {
                             updatePath = updatePath + ":jjb/jobs/${file.path}"
-                            echo ${updatePath}
+                            echo $updatePath
                         }    
                         else {
                         print ("Celenay")
