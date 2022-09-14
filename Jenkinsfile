@@ -21,6 +21,7 @@ pipeline {
                     for (int k = 0; k < files.size(); k++) {
                         def file = files[k]
                         print file.path 
+                        
                         updatePath = "jjb/jobs/current/common"
                         /*if (file.path.contains("current/common")) {
                             print updatePath
@@ -33,8 +34,8 @@ pipeline {
                             updatePath = updatePath + ":jjb/jobs/${file.path}"
                             print updatePath
                         }*/
-                        if (file.path.contains("src/com/arcgis")) {
-                            def splitPath = file.path.split("arcgis")
+                        if (file.path.startwith("Jenkinsfile")) {
+                            def splitPath = file.path.split("\n")
                             updatePath = updatePath + ":jjb/jobs/current/projects${splitPath[1]}"
                             print updatePath
                         }
