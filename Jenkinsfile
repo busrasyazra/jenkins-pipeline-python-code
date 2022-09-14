@@ -34,7 +34,7 @@ pipeline {
                             updatePath = updatePath + ":jjb/jobs/${file.path}"
                             print updatePath
                         }*/
-                        if (file.path.startwith("Jenkinsfile")) {
+                        if (file.path.startsWith("Jenkinsfile")) {
                             def splitPath = file.path.split("\n")
                             updatePath = updatePath + ":jjb/jobs/current/projects${splitPath[1]}"
                             print updatePath
