@@ -35,10 +35,11 @@ pipeline {
                             print updatePath
                         }*/
                         if (file.path.startsWith("src/com/arcgis")) {
-                            def splitPath = file.path.split("\n")
+                            //def splitPath = file.path.split("\n")
                             //updatePath = updatePath + ":jjb/jobs/current/projects${splitPath[1]}"
-                            print splitPath //updatePath
-                            
+                            //splitPath //updatePath
+                            tfValidatePaths = tfValidatePaths + file.path
+                            print tfValidatePaths
                         }
                    }
                  }
