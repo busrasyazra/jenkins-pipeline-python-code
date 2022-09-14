@@ -20,6 +20,7 @@ pipeline {
                     def files = new ArrayList(entry.affectedFiles)
                     for (int k = 0; k < files.size(); k++) {
                         def file = files[k]
+                        print files
                         print file.path 
                         tfValidatePaths = []
                         //updatePath = "jjb/jobs/current/common"
